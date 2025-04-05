@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nútrete Con Ciencia - Registro de Pacientes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+  <!-- Encabezado -->
+  <header class="bg-green-600 text-white p-4 shadow-md">
+    <h1 class="text-2xl font-bold text-center">Clínica Nútrete Con Ciencia</h1>
+    <p class="text-center text-sm">Registro de Pacientes y Gestión de Citas</p>
+  </header>
+
+  <!-- Formulario principal -->
+  <main class="p-6 max-w-4xl mx-auto">
+    <form class="bg-white p-6 rounded-2xl shadow-lg space-y-6">
+      <!-- Datos del Paciente -->
+      <h2 class="text-xl font-semibold text-green-700">Datos del Paciente</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Nombre completo" class="input" required />
+        <input type="number" placeholder="Edad" class="input" required />
+        <select class="input" required>
+          <option value="">Sexo</option>
+          <option>Mujer</option>
+          <option>Hombre</option>
+          <option>Otro</option>
+        </select>
+        <input type="text" placeholder="Tipo de sangre" class="input" />
+        <input type="text" placeholder="Ocupación" class="input" />
+        <input type="text" placeholder="Estado civil" class="input" />
+        <input type="tel" placeholder="Número de contacto" class="input" required />
+        <input type="email" placeholder="Correo electrónico" class="input" />
+      </div>
+
+      <!-- Datos de la Cita -->
+      <h2 class="text-xl font-semibold text-green-700">Datos de la Cita</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Motivo de la cita" class="input" required />
+        <input type="text" placeholder="Tipo de enfermedad (si aplica)" class="input" />
+        <select class="input" required>
+          <option value="">Nivel de urgencia</option>
+          <option>Bajo</option>
+          <option>Medio</option>
+          <option>Alto</option>
+        </select>
+        <select class="input" required>
+          <option value="">Tipo de atención</option>
+          <option>Consulta general</option>
+          <option>Especialidad</option>
+          <option>Otra</option>
+        </select>
+        <input type="date" class="input" required />
+        <input type="time" class="input" required />
+      </div>
+
+      <!-- Botón -->
+      <div class="text-center pt-4">
+        <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-xl hover:bg-green-700">
+          Registrar Cita
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Estilos personalizados -->
+  <style>
+    .input {
+      @apply border border-gray-300 rounded-xl px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500;
+    }
+  </style>
+</body>
+</html>
+
